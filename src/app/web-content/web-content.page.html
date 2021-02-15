@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+   <img class="logo" src="../../assets/logo-w.png" alt="">
+
+        <img slot="start" class="info" src="../../assets/info.png" alt="" (click)="data.presentAlert()">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="loading" class="loading" >
+    <ion-spinner></ion-spinner>
+  </div>
+  <div [innerHTML]="html"></div>
+</ion-content>

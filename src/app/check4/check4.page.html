@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+   <img class="logo" src="../../assets/logo-w.png" alt="">
+
+    <img slot="start" class="info" src="../../assets/info.png" alt="" (click)="data.presentAlert()">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>
+    تتبع حالتك الصحية؟
+  </h2>
+  <p>
+    تتبع نفسك كل يوم من خلال الإجابة على هذه الأسئلة لتحديد المخاطر الخاصة بك. </p>
+  <b>
+    هل قال مسؤول الصحة العامة أو طبيبك إنك من المحتمل أن تتعرض لـإلصابة بفيروس كورونا؟
+  </b>
+
+  <ion-button routerLink="/web-content/{{data.config.infected}}" expand="block" shape="round">
+    نعم
+  </ion-button>
+
+  <ion-button routerLink="/web-content/{{data.config.protect}}" expand="block" shape="round">
+    لا
+  </ion-button>
+
+
+</ion-content>

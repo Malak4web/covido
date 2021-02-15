@@ -8,6 +8,7 @@
  * For more information on global stylesheets, visit the documentation:
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap");
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
@@ -16,7 +17,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +25,97 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+* {
+    --ion-font-family: "Cairo", "arial";
+    font-family: "Cairo", "arial";
+    outline: none;
+}
+
+body {
+    direction: rtl;
+}
+
+ion-toolbar {
+    --background: #004e72;
+    color: #fff;
+    height: 70px;
+    // text-align: center;
+    * {
+        color: #fff;
+    }
+    ion-menu-button {
+        font-size: 51px;
+    }
+    img.logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+    }
+    .info {
+        height: 40px;
+        margin: 10px -5px;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    [name="cart"],
+    .bg {
+        font-size: 140px;
+    }
+}
+
+.customAlert {
+    .alert-wrapper {
+        border-radius: 25px;
+        background: #004e72;
+    }
+    .alert-message {
+        text-align: center;
+    }
+    .alert-message , button , a{
+        color: #fff !important;
+    }
+    
+}
+
+.btns{
+    button{
+        text-decoration: underline;
+        text-align: center !important;
+    }
+}
+
+
+app-check, app-check2, app-check3 ,app-check4 , app-quizs , app-supp{
+    h2 {
+        color: #035073;
+        // font-size: 41px;
+        font-weight: bold;
+    }
+    
+    p,
+    b,
+    h2 {
+        color: #035073;
+        text-align: center;
+        display: block;
+        margin: 0;
+    }
+    
+    p ,ion-button{
+        margin: 15px 0;
+    }
+}
+
+
+ion-content {
+    // margin-bottom: 120px !important;
+    --offset-bottom: -50px !important;
+}

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+   <img class="logo" src="../../assets/logo-w.png" alt="">
+
+    <img slot="start" class="info" src="../../assets/info.png" alt="" (click)="data.presentAlert()">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="loading" class="loading" >
+    <ion-spinner></ion-spinner>
+  </div>
+  <div *ngIf="!loading">
+    <h2 >
+      {{selectedQuiz.question.question}}
+    </h2>
+  
+  
+  
+    <ion-button *ngFor="let answer of selectedQuiz.answer" (click)="correct(answer.correct)" [class.correct]=" answer.correct == '1' && wrong" expand="block" shape="round" [color]=" answer.correct != '1' && wrong ? 'danger' : 'primary'">
+      {{answer.answer}}
+    </ion-button>
+
+    <div>
+      <b>
+        مجموع النقاط 
+        {{points}}
+        من 
+        {{pointsTotal}}
+      </b>
+    </div>
+
+    <ion-button class="next" *ngIf="wrong" (click)="next()" size="large" >
+      التالي
+    </ion-button>
+  </div>
+
+</ion-content>

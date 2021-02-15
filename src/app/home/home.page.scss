@@ -1,0 +1,14 @@
+h2{
+    color: #035073;
+    font-size: 51px;
+    font-weight: bold;
+}
+
+ion-col{
+    padding: 0;
+    margin-top: -20px;
+}
+
+ion-col:first-of-type , ion-col:nth-of-type(2){
+    margin-top: 0;
+}
